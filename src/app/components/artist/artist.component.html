@@ -1,0 +1,50 @@
+<app-loading *ngIf="loading"></app-loading>
+
+<div *ngIf="!loading" class="row box animated fadeIn">
+    <div class="col-4">
+        <img [src]="artist.images | noimage" class="img-circle">
+
+    </div>
+    <div class="col text-center card-font">
+        <h3>{{ artist.name }}</h3><br>
+        <h4>Followers: {{ artist.followers.total | number }}. <br>
+            Genres: {{ artist.genres }}. <br>
+            Popularity: {{ artist.popularity }}.
+        </h4>
+        <p>
+            <a [href]="artist.external_urls.spotify" target="_blank">
+                Go to Spotify's artist...
+            </a>
+        </p>
+
+        <button class="btn btn-outline-danger btnP" routerLink="/search">Back</button>
+    </div>
+</div>
+
+<div class="row box animated fadeIn  text-center  margin-top">
+    <div class="col">
+        <table class="table card-font">
+            <thead>
+                <tr>
+                    <td>Portrait</td>
+                    <td>Album</td>
+                    <td>Song</td>
+                    <td>Preview</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let track of topTracks">
+                    <td>
+                        <img [src]="track.album.images | noimage" alt="" class="img-thumb">
+                    </td>
+                    <td>{{ track.album.name }}</td>
+                    <td>{{ track.name }}</td>
+                    <td>
+                        <!-- <audio [src]="track.preview_url" controls></audio>  -->
+                        <iframe [src]="track.uri | domseguro:'https://open.spotify.com/embed?uri='" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,1 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #121212;
+    color: white !important;
+}
+
+hr {
+    border-color: white;
+}
+.btnP {
+    width: 6rem;
+    height: 2.5rem;
+}
+.box{
+    background-color: #242424;
+    border-radius: 5px;
+    padding: 2rem;
+}
+.margin-down {
+    margin-bottom: 2.5rem;
+    opacity: 87%;
+}
+
+.margin-top {
+    margin-top: 2.5rem;
+}
+
+.nav-color {
+    background-color: #363636;
+}
+
+.card-color {
+    background-color: #242424;
+}
+
+.badge-color {
+    background-color: #14cccc;
+    color: #121212;
+}
+
+.card-font {
+    color: white !important;
+    opacity: 87%;
+}
+
+
+.placeholder-color::-webkit-input-placeholder {
+    color:white;
+    opacity: 87%;
+} 
+
+
+.puntero {
+    cursor: pointer;
+}
+
+.img-circle {
+    border-radius: 100%;
+    width: 300px;
+}
+
+.card-title,
+.card-text {
+    color: black;
+}
+
+.badge {
+    margin-left: 5px;
+}
+
+.btn-outline-success {
+    margin-left: 5px;
+}
+
+.img-thumb {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
